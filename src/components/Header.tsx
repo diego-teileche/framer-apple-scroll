@@ -4,9 +4,12 @@ import Container from "./Container"
 const Header = () => {
 	return (
 		<>
-			<header className="bg-backgroundContrast text-white">
-				<Container className="flex items-center min-h-11">
-					<a href="/" className="flex h-11 items-center px-6 -ml-6">
+			<header className="bg-backgroundContrast relative text-white z-20">
+				<Container className="flex items-center min-h-[--header-row-height]">
+					<a
+						href="/"
+						className="flex h-[--header-row-height] items-center px-6 -ml-6"
+					>
 						<svg
 							fill="#fff"
 							width="20px"
@@ -20,10 +23,10 @@ const Header = () => {
 					</a>
 				</Container>
 			</header>
-			<div className="sticky top-0 bg-backgroundContrast text-white">
+			<div className="sticky z-20 top-0 bg-backgroundContrast text-white">
 				<Container className="flex items-center justify-between min-h-11">
 					<p className="text-xl font-semibold">Apple TV +</p>{" "}
-					<Button size="small">Diego</Button>
+					<Button size="small">Stream Now</Button>
 				</Container>
 			</div>
 		</>
