@@ -1,6 +1,7 @@
-import Container from "./components/Container"
 import Header from "./components/Header"
-import Hero from "./components/section/hero"
+import Hero from "./components/section/Hero"
+import Usps from "./components/section/Usps"
+import VideoCarousel from "./components/section/VideoCarousel"
 import "./index.css"
 
 function App() {
@@ -8,18 +9,12 @@ function App() {
 		<>
 			<Header />
 			<main>
-				<Hero />
-				<div>
-					<Container>Lorem, ipsum dolor.</Container>
+				<div className="bg-background">
+					<Hero />
+					<Usps />
 				</div>
-				<div>
-					<Container>Lorem ipsum dolor sit amet.</Container>
-				</div>
-				<div>
-					<Container>
-						Lorem ipsum dolor sit amet consectetur adipisicing.
-					</Container>
-				</div>
+				<VideoCarousel />
+				<div className="h-[300vh]"></div>
 			</main>
 		</>
 	)

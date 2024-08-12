@@ -19,7 +19,7 @@ export default {
 			xl: "1.3125rem",
 			"2xl": "1.5rem",
 			"3xl": "1.75rem",
-			"4xl": "2.5rem",
+			"4xl": ["2.5rem", "1.1"],
 			"5xl": ["4.5rem", "1.05"],
 		},
 		extend: {},
