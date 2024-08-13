@@ -66,7 +66,7 @@ const VideoCarousel = () => {
 					<div className="relative flex gap-5 mb-5 left-1/2 -translate-x-1/2">
 						<motion.div
 							style={{ opacity: postersOpacity, x: posterTranslateXLeft }}
-							className="shrink-0 overflow-clip w-[60vh] aspect-video rounded-2xl"
+							className="shrink-0 overflow-clip w-[40vh] md:w-[60vh] aspect-video rounded-2xl"
 						>
 							<img
 								src={movies[0].poster}
@@ -76,7 +76,7 @@ const VideoCarousel = () => {
 						</motion.div>
 						<motion.div
 							style={{ scale }}
-							className="relative shrink-0 overflow-clip w-[60vh] aspect-video rounded-2xl"
+							className="relative shrink-0 overflow-clip w-[40vh] md:w-[60vh] aspect-video rounded-2xl"
 						>
 							<img
 								src={movies[1].poster}
@@ -96,7 +96,7 @@ const VideoCarousel = () => {
 						</motion.div>
 						<motion.div
 							style={{ opacity: postersOpacity, x: posterTranslateXRight }}
-							className="shrink-0 overflow-clip w-[60vh] aspect-video rounded-2xl"
+							className="shrink-0 overflow-clip w-[40vh] md:w-[60vh] aspect-[9/16] md:aspect-video rounded-2xl"
 						>
 							<img
 								src={movies[2].poster}
@@ -114,7 +114,7 @@ const VideoCarousel = () => {
 					inactive: { opacity: 0, y: 20 },
 				}}
 				transition={{ duration: 0.4 }}
-				className="-mt-[calc(100vh-(60vw*(16/9)/2))] pt-5 space-y-3"
+				className="-mt-[calc((100vh-(300px*(16/9)))/2)] md:-mt-[calc((100vh-(60vw*(9/16)))/2)] pt-4 space-y-3"
 			>
 				<SmallCarousel movies={randomMoviesSet1} />
 				<div className="[--duration:70s] [--carousel-offset:-32px]">
@@ -132,7 +132,7 @@ const SmallCarousel = ({ movies }: { movies: Movie[] }) => {
 				{movies.map((movie, index) => (
 					<div
 						key={`${movie.name}-${index}`}
-						className="w-[23vh] shrink-0 aspect-video"
+						className="w-[30vh] md:w-[23vh] shrink-0 aspect-video"
 					>
 						<img
 							src={movie.poster}

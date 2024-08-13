@@ -37,7 +37,7 @@ const Hero = () => {
 					animate="hidden"
 					viewport={{ amount: 0.9 }}
 				>
-					<h1 className="text-5xl font-bold mb-10">
+					<h1 className="text-4xl md:text-5xl font-bold mb-10">
 						All Apple Originals. <br />
 						Only on Apple TV+.
 					</h1>
